@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estágio Lett</title>
+    <link rel="shortcut icon" href="../assets/photo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1><b>Teste Estágio Fullstack</b></h1>
+    </header>
+    <div class="container">
+      <div class="box">
+        <p style="font-size: 20px">
+          <b>
+            Preencha o campo, com o nome da org, para ter acesso aos
+            repositorios:
+          </b>
+          <input
+            type="text"
+            id="user-input-org"
+            placeholder="Digite a org"
+            onkeydown="if (event.keyCode == 13)
+                    handleSubmit()"
+          />
+          <button type="button" id="submit" onclick="handleSubmit()">
+            Pesquisar
+          </button>
+          <button id="refresh">Limpar a pagina</button>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="box">
+        <p>
+          <b>Digite o nome do repositorio:</b>
+          <input
+            type="text"
+            id="filter"
+            onkeydown="if (event.keyCode == 13)
+                        help()"
+          />
+          <button type="button" id="submit2" onclick="help()">Pesquisar</button>
+        </p>
+      </div>
+    </div>
+
+    <div id="repo-container"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
